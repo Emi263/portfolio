@@ -37,7 +37,7 @@ function Introduction() {
           <h1>KISS.</h1>
           <h1>SOLID.</h1>
           <a href="#contact">
-            Contact me <i class="fas fa-arrow-right"></i>
+            Contact me <i className="fas fa-arrow-right"></i>
           </a>
         </section>
       </div>
