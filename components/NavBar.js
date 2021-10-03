@@ -14,7 +14,7 @@ function Hamburger({ active, onClick }) {
 }
 
 function NavBar() {
-  const [active, setActive] = useState(true); //navbar state
+  const [active, setActive] = useState(false); //navbar state
   const menu = [
     {
       text: "About",
@@ -35,7 +35,15 @@ function NavBar() {
       href: "#",
     },
   ];
-
+  useEffect(() => {
+    if (active) {
+      document.querySelector("body").style.height = "100vh";
+      document.querySelector("body").style.overflowY = "hidden";
+    } else {
+      document.querySelector("body").style.height = "auto";
+      document.querySelector("body").style.overflowY = "scroll";
+    }
+  }, [active]);
   return (
     <>
       <Head>

@@ -141,7 +141,7 @@ ul.menu li:hover {
   bottom: 5%;
   left: 0;
   background-color: blue;
-  height: 450px;
+  height: 300px;
   clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
 }
 
