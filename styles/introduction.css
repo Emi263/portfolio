@@ -3,14 +3,16 @@
   position: relative;
   width: 100%;
   z-index: 2;
-
   padding-bottom: 4rem;
 }
 .firstSection {
   position: relative;
   width: 100%;
-
   padding-bottom: 5rem;
+}
+.absSvg {
+  position: absolute;
+  visibility: hidden;
 }
 
 .title {
@@ -31,7 +33,7 @@
   left: 25px;
   top: 12.5px;
 }
-p {
+p.name {
   color: rgb(16, 16, 41);
   font-size: 32px;
   line-height: 48px;
@@ -52,13 +54,15 @@ p {
   display: block;
   width: 100%;
 }
-
+.picture {
+  display: flex;
+  flex-direction: column;
+}
 .bottomsvg {
   width: 100%;
   position: absolute;
   bottom: -50px;
   left: 0;
-
   background-repeat: no-repeat;
   height: 100px;
 }
@@ -103,9 +107,109 @@ section a {
   gap: 5px;
   cursor: pointer;
   transition: 0.1s ease-in;
+  max-width: 400px;
 }
 
 section a:hover {
-  opacity: 0.9;
-  transform: scale(0.95);
+  opacity: 0.99;
+  transform: scale(0.98);
+}
+
+/*SVG fix*/
+
+@media screen and (min-width: 500px) {
+  section > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+  section > div h1 {
+    font-size: 50px;
+  }
+
+  .picture {
+    display: flex;
+    flex-direction: row;
+  }
+  .topsvg {
+    display: none;
+  }
+
+  .bottomsvg {
+    display: none;
+  }
+
+  .absSvg {
+    visibility: visible;
+    width: 200px;
+    position: absolute;
+    opacity: 0.35;
+    top: 20%;
+    left: 35%;
+    animation: animateSvg linear 10s infinite;
+  }
+  .secondSvg {
+    top: 30%;
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  section > div h1 {
+    font-size: 72px;
+    line-height: 40px;
+  }
+  .title {
+    padding-left: 12rem;
+    font-size: 21px;
+  }
+  .title::before {
+    left: 95px;
+  }
+
+  p.name {
+    margin-top: 20px;
+    width: 60%;
+    font-size: 72px;
+    line-height: 84px;
+    padding: 2rem;
+    padding-left: 6rem;
+    padding-top: 0;
+  }
+
+  p.second {
+    font-size: 42px;
+    line-height: 56px;
+    padding: 1.2rem;
+    padding-bottom: 3rem;
+    padding: 2rem;
+    padding-left: 6rem;
+    width: 90%;
+    padding-top: 0;
+  }
+  section > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+
+  .picture {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@keyframes animateSvg {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  p.name {
+    font-size: 52px;
+    line-height: 64px;
+  }
 }

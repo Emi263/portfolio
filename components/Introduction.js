@@ -1,5 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import Head from "next/head";
+import Gif from "../public/ungif.gif";
 function Introduction() {
   return (
     <>
@@ -14,16 +16,36 @@ function Introduction() {
       </Head>
       <div className="introduction">
         <div className="firstSection">
+          <div className="absSvg secondSvg">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#1A1D88"
+                d="M27.8,-51.8C35.4,-43.7,40.7,-35.1,51.8,-26.4C62.9,-17.7,79.8,-8.8,85,3C90.2,14.8,83.5,29.6,74.2,41.4C64.9,53.2,52.9,61.9,40,61.3C27.2,60.8,13.6,50.8,2.7,46.2C-8.3,41.5,-16.5,42.2,-25.3,40.5C-34.1,38.8,-43.4,34.6,-53.1,27.5C-62.7,20.3,-72.6,10.2,-70.5,1.2C-68.4,-7.8,-54.4,-15.5,-48.5,-29.1C-42.5,-42.6,-44.7,-62,-38,-70.6C-31.3,-79.2,-15.6,-77.1,-2.8,-72.3C10.1,-67.5,20.1,-59.9,27.8,-51.8Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
           <div className="title">Emrulla Ramilli</div>
-          <p>
-            Hello, my name is Emrulla. I am a Junior FrontEnd (React JS)
-            Developer
-          </p>
+          <div className="picture">
+            <p className="name">
+              Hello, my name is Emrulla. I am a Junior FrontEnd (React JS)
+              Developer
+            </p>
+            <picture>
+              <Image
+                className="gif-image"
+                src={Gif}
+                height={500}
+                width={500}
+                layout="intrinsic"
+              />
+            </picture>
+          </div>
           <div className="topsvg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#ffbdbd"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,0L48,10.7C96,21,192,43,288,80C384,117,480,171,576,170.7C672,171,768,117,864,112C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
             </svg>
@@ -32,13 +54,22 @@ function Introduction() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#ffbdbd"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,224L48,240C96,256,192,288,288,282.7C384,277,480,235,576,224C672,213,768,235,864,245.3C960,256,1056,256,1152,240C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
               ></path>
             </svg>
           </div>
         </div>
         <div className="firstSection">
+          <div className="absSvg">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#1A1D88"
+                d="M43,-74.6C56.8,-66.5,69.8,-57.1,78.6,-44.5C87.5,-31.8,92.2,-15.9,92.1,-0.1C92,15.8,87,31.6,79,45.7C71,59.8,59.9,72.2,46.2,79.5C32.6,86.8,16.3,89.1,0.2,88.7C-15.9,88.3,-31.7,85.4,-44.8,77.7C-57.8,70,-68,57.6,-76.5,43.8C-85,30.1,-91.7,15.1,-92.9,-0.7C-94.1,-16.5,-89.8,-32.9,-80.8,-45.7C-71.8,-58.6,-58.2,-67.8,-43.9,-75.6C-29.7,-83.4,-14.8,-89.8,-0.1,-89.6C14.6,-89.4,29.2,-82.6,43,-74.6Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
           <div className="title">What I do</div>
           <p className="second">
             I enjoy creating websites and Single Page Applications with React JS
@@ -49,7 +80,7 @@ function Introduction() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#ffbdbd"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,0L48,10.7C96,21,192,43,288,80C384,117,480,171,576,170.7C672,171,768,117,864,112C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
             </svg>
@@ -58,7 +89,7 @@ function Introduction() {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#ffbdbd"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,224L48,240C96,256,192,288,288,282.7C384,277,480,235,576,224C672,213,768,235,864,245.3C960,256,1056,256,1152,240C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
               ></path>
             </svg>
@@ -66,10 +97,11 @@ function Introduction() {
         </div>
 
         <section>
-          <h1>DRY.</h1>
-          <h1>KISS.</h1>
-          <h1>SOLID.</h1>
-
+          <div>
+            <h1>DRY.</h1>
+            <h1>KISS.</h1>
+            <h1>SOLID.</h1>
+          </div>
           <a href="#contact">
             Contact me <i className="fas fa-arrow-right"></i>
           </a>

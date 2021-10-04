@@ -62,6 +62,8 @@ function NavBar() {
             <span className="r">R</span>
             <span className="portfolio">PORTFOLIO</span>
             <span className="point">.</span>
+
+            
           </div>
           <Hamburger active={active} onClick={() => setActive(!active)} />
         </div>
@@ -115,7 +117,7 @@ function NavBar() {
                 <a href={item.href}>{item.text}</a>
               </motion.li>
             ))}
-            <div className="socialmedia">
+            <div className="socialmedia mobile">
               <span>
                 <i className="fab fa-linkedin"></i>
                 <a href="#">Linkedin Profile </a>
