@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import "../styles/navbar.css";
 import "../styles/introduction.css";
+import "../styles/singleCard.css";
+
 import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   <Head>

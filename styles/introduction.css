@@ -12,7 +12,12 @@
 }
 .absSvg {
   position: absolute;
-  visibility: hidden;
+  visibility: visible;
+  width: 200px;
+  top: 20%;
+  animation: animateSvg linear 10s infinite;
+  opacity: 0.35;
+  left: 25%;
 }
 
 .title {
@@ -41,30 +46,10 @@ p.name {
   font-family: "Poppins", sans-serif;
   padding: 1.5rem;
 }
-.topsvg {
-  width: 100%;
-  position: absolute;
-  bottom: 31px;
-  left: 0;
-  height: 100px;
-}
 
-.bottomsvg svg,
-.topsvg svg {
-  display: block;
-  width: 100%;
-}
 .picture {
   display: flex;
   flex-direction: column;
-}
-.bottomsvg {
-  width: 100%;
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  background-repeat: no-repeat;
-  height: 100px;
 }
 
 p.second {
@@ -131,13 +116,6 @@ section a:hover {
   .picture {
     display: flex;
     flex-direction: row;
-  }
-  .topsvg {
-    display: none;
-  }
-
-  .bottomsvg {
-    display: none;
   }
 
   .absSvg {

@@ -1,0 +1,46 @@
+/*CARDS CONTAINER*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  justify-content: center;
+  padding-bottom: 32rem;
+}
+
+/*END*/
+.singleCard {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: relative;
+  max-width: 400px;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  margin: auto;
+  background-color: black;
+}
+.card-title {
+  text-align: center;
+  padding: 2rem;
+  color: rgb(16, 16, 41);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.singleCard p {
+  margin: auto;
+  color: rgb(113, 113, 113);
+  text-align: center;
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
