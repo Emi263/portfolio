@@ -15,7 +15,13 @@ function Project({ title, image, github, demo, description }) {
       </Head>
       <div className="project">
         <picture>
-          <Image src={image} width={400} height={400} layout="responsive" />
+          <Image
+            src={image}
+            width={400}
+            height={400}
+            layout="responsive"
+            alt={title}
+          />
         </picture>
         <h1>{title}</h1>
         <h4>{description}</h4>
