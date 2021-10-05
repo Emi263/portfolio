@@ -33,6 +33,7 @@ function Cards() {
           image={data.image}
           description={data.description}
           title={data.title}
+          key={data.title}
         />
       ))}
     </div>
