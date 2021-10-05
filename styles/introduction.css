@@ -14,7 +14,7 @@
   position: absolute;
   visibility: visible;
   width: 200px;
-  top: 20%;
+  top: 10%;
   animation: animateSvg linear 10s infinite;
   opacity: 0.35;
   left: 25%;
