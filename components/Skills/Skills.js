@@ -70,7 +70,12 @@ function Skills() {
       <div className="title">My Skills</div>
       <div className="skills-container">
         {data.map((data) => (
-          <SkillCard text={data.text} icon={data.icon} level={data.level} />
+          <SkillCard
+            key={data.text}
+            text={data.text}
+            icon={data.icon}
+            level={data.level}
+          />
         ))}
       </div>
     </div>
