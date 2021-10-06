@@ -44,7 +44,7 @@ function Skills() {
       level: "Intermediate",
     },
     {
-      text: "Styled Components",
+      text: "Styled Comp",
       icon: "fas fa-pencil-alt",
       level: "Advanced",
     },
@@ -62,6 +62,27 @@ function Skills() {
       text: "Contentful",
       icon: "fas fa-feather-alt",
       level: "Intermediate",
+    },
+    {
+      text: "Redux Toolkit",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
+    {
+      text: "Storybook",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Basic",
+    },
+
+    {
+      text: "Bootstrap",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
+    {
+      text: "React Testing",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Basic",
     },
   ];
 

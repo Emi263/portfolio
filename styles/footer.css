@@ -1,0 +1,51 @@
+footer {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+footer div {
+  width: 270px;
+  height: 175px;
+  color: rgb(16, 16, 41);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  gap: 10px;
+}
+.div {
+  display: flex;
+  flex-direction: row;
+}
+.d {
+  font-size: 25px;
+}
+footer div i {
+  color: rgb(16, 16, 41);
+}
+footer div:hover i,
+footer div:hover a,
+footer div:hover address {
+  font-size: 18px;
+}
+footer i,
+footer a,
+footer address {
+  transition: 0.2s ease-in;
+}
+
+.card-footer {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

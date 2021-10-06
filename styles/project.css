@@ -6,17 +6,45 @@
   position: relative;
   width: 100%;
   padding-top: 3rem;
-
   margin: auto;
 }
+
+.btn {
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.btn button {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(131, 100, 100);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 .project {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   padding: 1rem;
   margin: auto;
+  transition: 0.2s transform ease;
+  cursor: pointer;
 }
 
 .project picture {
@@ -92,6 +120,9 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 3rem;
+  }
+  .project:hover {
+    transform: scale(1.2);
   }
 }

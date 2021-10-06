@@ -30,12 +30,13 @@ function Cards() {
     <>
       <h1 className="title">What to expect from me</h1>
       <div className="cards">
-        {data.map((data) => (
+        {data.map((data, index) => (
           <SingleCard
             image={data.image}
             description={data.description}
             title={data.title}
             key={data.title}
+            index={index}
           />
         ))}
       </div>

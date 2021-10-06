@@ -62,8 +62,15 @@ function NavBar() {
             <span className="r">R</span>
             <span className="portfolio">PORTFOLIO</span>
             <span className="point">.</span>
-
-            
+            <span className="cv">
+              <a href="https://drive.google.com/file/d/1e5XLK1cVmSkBQub-lRlOMwR2yOdbdp26/view?usp=sharing">
+                CV
+                <i
+                  style={{ marginLeft: "8px" }}
+                  className="fas fa-cloud-download-alt"
+                ></i>
+              </a>{" "}
+            </span>
           </div>
           <Hamburger active={active} onClick={() => setActive(!active)} />
         </div>

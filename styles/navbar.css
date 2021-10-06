@@ -24,8 +24,12 @@ nav {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.1s ease-in;
 }
-
+.hamburger:hover {
+  background-color: rgba(89, 89, 255, 0.335);
+}
 .hamburger span {
   transition: 0.2s ease-in;
   display: block;
@@ -44,7 +48,6 @@ nav {
 /*ER PORTFOLIO*/
 .name {
   width: 100%;
-
   position: relative;
 }
 span.e {
@@ -69,6 +72,21 @@ span.point {
   font-size: 23px;
   font-weight: bolder;
   margin-left: 3px;
+}
+span.cv a {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0.4rem;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 15px;
+  background-color: rgb(76, 64, 248);
+  color: white;
+  position: relative;
+  transition: 0.1s ease-in;
+}
+span.cv a:hover {
+  transform: scale(1.06);
 }
 
 /*End*/
@@ -146,6 +164,16 @@ ul.menu li:hover {
 }
 
 @media screen and (min-width: 900px) {
+  span.cv a {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 23px;
+    font-weight: bolder;
+    margin-left: 20px;
+  }
+
   span.e {
     font-size: 40px;
     font-weight: bolder;

@@ -9,6 +9,8 @@ import Storybook from "../../public/slider/storybook.jpg";
 import Twitter from "../../public/slider/twitter.jpg";
 import Logo from "../../public/slider/bayernlogo.png";
 function Portfolio() {
+  const slider = React.useRef();
+
   const projects = [
     {
       title: "Netflix clone",
@@ -60,8 +62,21 @@ function Portfolio() {
       description: "HTML, CSS",
     },
   ];
+
+  const Buttons = () => {
+    return (
+      <div className="btn">
+        <button onClick={() => slider?.current?.slickPrev()}>
+          <i className="fas fa-arrow-circle-left"></i>Prev
+        </button>
+        <button onClick={() => slider?.current?.slickNext()}>
+          Next<i className="fas fa-arrow-circle-right"></i>
+        </button>
+      </div>
+    );
+  };
+
   const settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -78,7 +93,7 @@ function Portfolio() {
     <div className="wrapper">
       <h1 className="title">My Portfolio</h1>
       <div className="sliderMobile">
-        <Slider {...settings}>
+        <Slider {...settings} ref={slider}>
           {projects.map((project) => (
             <Project
               key={project.title}
@@ -90,6 +105,7 @@ function Portfolio() {
             />
           ))}
         </Slider>
+        <Buttons />
       </div>
       <div className="projectsNotMobile">
         {projects.map((project) => (

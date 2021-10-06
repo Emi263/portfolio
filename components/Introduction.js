@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Gif from "../public/ungif.gif";
+
 function Introduction() {
   return (
     <>
