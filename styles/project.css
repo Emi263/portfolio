@@ -1,7 +1,12 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
 .sliderMobile {
   position: relative;
-  width: 80%;
-  padding-bottom: 45rem;
+  width: 100%;
+  padding-top: 3rem;
+
   margin: auto;
 }
 .project {
@@ -11,6 +16,7 @@
   width: 100%;
   max-width: 400px;
   padding: 1rem;
+  margin: auto;
 }
 
 .project picture {

@@ -1,0 +1,66 @@
+.skills {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.skills-container {
+  padding-top: 10rem;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  gap: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(6, 9, 194);
+  border-radius: 10px;
+}
+.skill-card:nth-child(4n) {
+  background-color: rgb(79, 66, 247);
+}
+.skill-card:nth-child(4n + 1) {
+  background-color: rgb(195, 128, 128);
+}
+.skill-card:nth-child(4n + 2) {
+  background-color: rgb(63, 0, 146);
+}
+.skill-card:nth-child(4n + 3) {
+  background-color: rgb(19, 111, 255);
+}
+
+.skills h1 {
+  margin: 0;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.skill-card span {
+  color: rgba(245, 222, 179, 0.691);
+}
+
+@media screen and (max-width: 550px) {
+  .skill-card {
+    width: 150px;
+  }
+  .skills-container {
+    width: 100%;
+    gap: 0.6rem;
+  }
+}

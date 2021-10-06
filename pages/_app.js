@@ -3,6 +3,7 @@ import "../styles/navbar.css";
 import "../styles/introduction.css";
 import "../styles/singleCard.css";
 import "../styles/project.css";
+import "../styles/skills.css";
 //Slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -71,10 +71,11 @@ function Portfolio() {
     centerPadding: "0px",
     autoplay: true,
     speed: 1000,
+    loading: "lazy",
   };
 
   return (
-    <>
+    <div className="wrapper">
       <h1 className="title">My Portfolio</h1>
       <div className="sliderMobile">
         <Slider {...settings}>
@@ -102,8 +103,7 @@ function Portfolio() {
           />
         ))}
       </div>
-      See all project here
-    </>
+    </div>
   );
 }
 
