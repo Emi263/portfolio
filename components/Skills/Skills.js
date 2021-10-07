@@ -90,12 +90,13 @@ function Skills() {
     <div className="skills" id="skills">
       <div className="title">My Skills</div>
       <div className="skills-container">
-        {data.map((data) => (
+        {data.map((data, index) => (
           <SkillCard
             key={data.text}
             text={data.text}
             icon={data.icon}
             level={data.level}
+            index={index}
           />
         ))}
       </div>

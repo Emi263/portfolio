@@ -2,9 +2,18 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Gif from "../public/ungif.gif";
-import { motion } from "framer-motion";
-
+import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 function Introduction() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <>
       <Head>
@@ -72,21 +81,47 @@ function Introduction() {
               />
             </svg>
           </div>
-          <div className="title">What I do</div>
-          <p className="second">
+          <motion.div
+            ref={ref}
+            className="title"
+            animate={controls}
+            initial="hidden"
+            transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -500 },
+            }}
+          >
+            What I do
+          </motion.div>
+          <motion.p
+            ref={ref}
+            className="second"
+            animate={controls}
+            initial="hidden"
+            transition={{
+              duration: 0.4,
+              type: "spring",
+              stiffness: 100,
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -10 },
+            }}
+          >
             I enjoy creating websites and Single Page Applications with React JS
             ecosystem technologies! I pay attention to pixels and responsiveness
             of a website.
-          </p>
+          </motion.p>
           <div className="topsvg"></div>
         </div>
 
         <section>
-          <div>
+          <motion.div>
             <h1>DRY.</h1>
             <h1>KISS.</h1>
             <h1>SOLID.</h1>
-          </div>
+          </motion.div>
           <a href="#contact">
             Contact me <i className="fas fa-arrow-right"></i>
           </a>

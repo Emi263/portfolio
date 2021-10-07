@@ -97,12 +97,13 @@ ul.menu {
   width: 100%;
   top: 100px;
   left: 0;
-  display: flex;
+  display: none;
   z-index: 5436456;
   flex-direction: column;
   height: 100%;
 }
 ul.menu.active {
+  display: flex;
   transform: translateX(0);
 }
 

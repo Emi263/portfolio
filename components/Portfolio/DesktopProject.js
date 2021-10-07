@@ -1,8 +1,17 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+function DesktopProject({ title, image, github, demo, description, index }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-function Project({ title, image, github, demo, description, index }) {
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <>
       <Head>
@@ -14,7 +23,22 @@ function Project({ title, image, github, demo, description, index }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <div className="project">
+      <motion.div
+        className="project"
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: { opacity: 1, x: 0, y: 0 },
+          hidden: { opacity: 0, x: -100, y: -100 },
+        }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 120,
+          delay: index * 0.4,
+        }}
+      >
         <picture>
           <Image
             src={image}
@@ -35,9 +59,9 @@ function Project({ title, image, github, demo, description, index }) {
             Live Demo <i className="fab fa-chrome"></i>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
 
-export default Project;
+export default DesktopProject;

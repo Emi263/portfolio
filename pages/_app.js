@@ -10,6 +10,8 @@ import "slick-carousel/slick/slick.css";
 
 import "slick-carousel/slick/slick-theme.css";
 //end
+//toastify
+import "react-toastify/dist/ReactToastify.css";
 
 import Head from "next/head";
 function MyApp({ Component, pageProps }) {

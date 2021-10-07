@@ -48,3 +48,66 @@ body::-webkit-scrollbar-thumb {
 
   border-radius: 20px;
 }
+.thelink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.8rem;
+  font-family: "Poppins", sans;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(76, 64, 248);
+  font-size: 16px;
+  margin: auto;
+}
+
+.thediv {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .thediv {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .thelink {
+    gap: 8px;
+    padding: 0.5rem;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+  }
+}
+.projectContainer {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.projectContainer .project:hover {
+  transform: scale(1.05);
+}
+.link-container {
+  text-align: center;
+  padding: 2rem;
+}
+.link-container a {
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: rgb(76, 64, 247);
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-in;
+}
+.link-container a:hover {
+  transform: scale(0.95);
+}

@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 function Footer() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const data = [
     {
       title: "Email",
@@ -35,19 +45,34 @@ function Footer() {
       </h1>
       <footer>
         <div className="top-icon">
-          <a href="#home">
+          <a href="#nav">
             <i className="far fa-arrow-alt-circle-up"></i>{" "}
           </a>
           <span>Go to top</span>
         </div>
-        {data.map(({ title, text, icon, href }) => (
-          <div key={text} className="contact-card">
+        {data.map(({ title, text, icon, href }, index) => (
+          <motion.div
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={{
+              visible: { opacity: 1, scale: 1, originX: 0 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            transition={{
+              duration: 0.5,
+              ease: "easeIn",
+              delay: index * 0.1,
+            }}
+            key={text}
+            className="contact-card"
+          >
             <h1 className="contact-title">{title}</h1>
             <div className="icon">
               <i className={icon}> </i>
               <a href={href}>{text}</a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </footer>
     </>

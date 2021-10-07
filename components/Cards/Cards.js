@@ -27,7 +27,7 @@ function Cards() {
   ];
 
   return (
-    <>
+    <div style={{ paddingBottom: "3rem" }}>
       <h1 className="title" id="about">
         What to expect from me
       </h1>
@@ -42,7 +42,7 @@ function Cards() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

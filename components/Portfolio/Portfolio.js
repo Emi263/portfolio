@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "./Project";
+import DesktopProject from "./DesktopProject";
 import Slider from "react-slick";
 import Netflix from "../../public/slider/netflix.jpg";
 import Todo from "../../public/slider/todo.jpg";
@@ -8,6 +9,8 @@ import Commerce from "../../public/slider/ecommerce.jpg";
 import Storybook from "../../public/slider/storybook.jpg";
 import Twitter from "../../public/slider/twitter.jpg";
 import Logo from "../../public/slider/bayernlogo.png";
+import Link from "next/link";
+import { motion } from "framer-motion";
 function Portfolio() {
   const slider = React.useRef();
 
@@ -91,7 +94,21 @@ function Portfolio() {
 
   return (
     <div className="wrapper" id="portfolio">
-      <h1 className="title">My Portfolio</h1>
+      <div className="thediv">
+        {" "}
+        <h1 className="title">My Portfolio</h1>{" "}
+        <motion.div
+          style={{ marginLeft: "-50%" }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+        >
+          <Link href="/projects">
+            <a className="thelink">
+              All the projects <i className="fas fa-hand-point-right"></i>
+            </a>
+          </Link>{" "}
+        </motion.div>
+      </div>
       <div className="sliderMobile">
         <Slider {...settings} ref={slider}>
           {projects.map((project) => (
@@ -108,14 +125,15 @@ function Portfolio() {
         <Buttons />
       </div>
       <div className="projectsNotMobile">
-        {projects.map((project) => (
-          <Project
+        {projects.map((project, index) => (
+          <DesktopProject
             key={project.title}
             image={project.image}
             title={project.title}
             description={project.description}
             demo={project.demo}
             github={project.github}
+            index={index}
           />
         ))}
       </div>

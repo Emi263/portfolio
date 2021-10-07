@@ -19,14 +19,20 @@ function SingleCard({ image, title, description, index }) {
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 0.6, delay: index * 0.5 }}
+      transition={{ duration: 0.6, delay: index * 0.3 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },
       }}
     >
       <div className="image">
-        <Image src={image} width={1184} height={858} layout="intrinsic" />
+        <Image
+          src={image}
+          width={1184}
+          height={858}
+          layout="intrinsic"
+          loading="eager"
+        />
       </div>
       <div className="card-title">{title}</div>
       <p>{description}</p>

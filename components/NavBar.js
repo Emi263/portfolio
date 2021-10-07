@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+
+import { motion, useAnimation } from "framer-motion";
+
 function Hamburger({ active, onClick }) {
   return (
     <div
@@ -60,14 +63,14 @@ function NavBar() {
         />
       </Head>
       <nav>
-        <div className="navbar">
+        <div className="navbar" id="nav">
           <div className="name">
             <span className="e">E</span>
             <span className="r">R</span>
             <span className="portfolio">PORTFOLIO</span>
             <span className="point">.</span>
             <span className="cv">
-              <a href="https://drive.google.com/file/d/1e5XLK1cVmSkBQub-lRlOMwR2yOdbdp26/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1ifCdSgHwUZ5t3dhIJ_RwoyiSv79lUaR_/view?usp=sharing">
                 CV
                 <i
                   style={{ marginLeft: "8px" }}
@@ -82,11 +85,8 @@ function NavBar() {
         <ul className={active ? "menu active" : "menu"}>
           <div className="blank">
             <i className="fab fa-html5 blank-icon"></i>
-
             <i className="fab fa-css3-alt blank-icon"></i>
-
             <i className="fab fa-react blank-icon"></i>
-
             <i className="fas fa-laptop-code blank-icon"></i>
           </div>
           <div className="middle">
@@ -123,9 +123,14 @@ function NavBar() {
           </div>
           <div className="list">
             {menu.map((item, index) => (
-              <li key={item.text} onClick={() => handleMenuClick()}>
+              <motion.li
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                key={item.text}
+                onClick={() => handleMenuClick()}
+              >
                 <a href={item.href}>{item.text}</a>
-              </li>
+              </motion.li>
             ))}
             <div className="socialmedia mobile">
               <span>
