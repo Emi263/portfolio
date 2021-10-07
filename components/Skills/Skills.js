@@ -87,7 +87,7 @@ function Skills() {
   ];
 
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="title">My Skills</div>
       <div className="skills-container">
         {data.map((data) => (

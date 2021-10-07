@@ -90,7 +90,7 @@ function Portfolio() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="portfolio">
       <h1 className="title">My Portfolio</h1>
       <div className="sliderMobile">
         <Slider {...settings} ref={slider}>

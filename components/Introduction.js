@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Gif from "../public/ungif.gif";
+import { motion } from "framer-motion";
 
 function Introduction() {
   return (
@@ -15,7 +16,7 @@ function Introduction() {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <div className="introduction">
+      <div className="introduction" id="home">
         <div className="firstSection">
           <div className="absSvg secondSvg">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -26,13 +27,29 @@ function Introduction() {
               />
             </svg>
           </div>
-          <div className="title">Emrulla Ramilli</div>
+          <motion.div
+            className="title"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+          >
+            Emrulla Ramilli
+          </motion.div>
           <div className="picture">
-            <p className="name">
+            <motion.p
+              className="name"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+            >
               Hello, my name is Emrulla. I am a Junior FrontEnd (React JS)
               Developer
-            </p>
-            <picture>
+            </motion.p>
+            <motion.picture
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
+            >
               <Image
                 className="gif-image"
                 src={Gif}
@@ -40,7 +57,7 @@ function Introduction() {
                 width={500}
                 layout="intrinsic"
               />
-            </picture>
+            </motion.picture>
           </div>
         </div>
         <div className="firstSection">

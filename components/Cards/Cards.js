@@ -28,7 +28,9 @@ function Cards() {
 
   return (
     <>
-      <h1 className="title">What to expect from me</h1>
+      <h1 className="title" id="about">
+        What to expect from me
+      </h1>
       <div className="cards">
         {data.map((data, index) => (
           <SingleCard

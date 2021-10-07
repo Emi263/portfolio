@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 function Hamburger({ active, onClick }) {
   return (
@@ -18,23 +17,28 @@ function NavBar() {
   const menu = [
     {
       text: "About",
-      href: "#",
+      href: "#about",
     },
     {
       text: "Works",
-      href: "#",
+      href: "#portfolio",
     },
 
     {
-      text: "Services",
-      href: "#",
+      text: "Skills",
+      href: "#skills",
     },
 
     {
       text: "Contact",
-      href: "#",
+      href: "#contact",
     },
   ];
+
+  const handleMenuClick = () => {
+    setActive(false);
+  };
+
   useEffect(() => {
     if (active) {
       document.querySelector("body").style.height = "100vh";
@@ -105,24 +109,23 @@ function NavBar() {
             <div className="socialmedia">
               <span>
                 <i className="fab fa-linkedin"></i>
-                <a href="#">Linkedin Profile </a>
+                <a href="https://www.linkedin.com/in/emrulla-ramilli-871441201/">
+                  Linkedin Profile{" "}
+                </a>
               </span>
               <span>
                 <i className="fab fa-instagram"></i>
-                <a href="#">Instagram Profile </a>
+                <a href="https://www.instagram.com/emi___26/">
+                  Instagram Profile{" "}
+                </a>
               </span>
             </div>
           </div>
           <div className="list">
             {menu.map((item, index) => (
-              <motion.li
-                key={item.text}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: 10 }}
-                transition={{ duration: 0.3, delay: index * 0.2 }}
-              >
+              <li key={item.text} onClick={() => handleMenuClick()}>
                 <a href={item.href}>{item.text}</a>
-              </motion.li>
+              </li>
             ))}
             <div className="socialmedia mobile">
               <span>
