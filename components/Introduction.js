@@ -56,6 +56,8 @@ function Introduction() {
                 height={500}
                 width={500}
                 layout="intrinsic"
+                alt="A guy programming"
+                priority={true}
               />
             </motion.picture>
           </div>
