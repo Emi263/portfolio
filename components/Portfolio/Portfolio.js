@@ -95,19 +95,14 @@ function Portfolio() {
   return (
     <div className="wrapper" id="portfolio">
       <div className="thediv">
-        {" "}
-        <h1 className="title">My Portfolio</h1>{" "}
-        <motion.div
-          style={{ marginLeft: "-50%" }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-        >
+        <h1 className="title">My Portfolio</h1>
+        <span>
           <Link href="/projects">
-            <a className="thelink">
+            <motion.a>
               All the projects <i className="fas fa-hand-point-right"></i>
-            </a>
+            </motion.a>
           </Link>{" "}
-        </motion.div>
+        </span>
       </div>
       <div className="sliderMobile">
         <Slider {...settings} ref={slider}>

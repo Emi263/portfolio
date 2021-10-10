@@ -21,16 +21,19 @@ import { ToastContainer, toast } from "react-toastify";
 
 function AllProjects() {
   useEffect(() => {
-    toast.info("Hover over the cards to see a description of each website", {
-      position: "top-center",
-      style: { backgroundColor: "black", color: "white" },
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.info(
+      "Hover over the cards to see a description of each website (Desktop only)",
+      {
+        position: "top-center",
+        style: { backgroundColor: "black", color: "white" },
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      }
+    );
   }, []);
 
   const router = useRouter();

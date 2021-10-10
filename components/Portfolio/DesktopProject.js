@@ -60,6 +60,13 @@ function DesktopProject({ title, image, github, demo, description, index }) {
           </a>
         </div>
       </motion.div>
+
+      <style jsx>
+        {`
+.project:hover {
+  transform: scale(1.1);
+`}
+      </style>
     </>
   );
 }
