@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 function Hamburger({ active, onClick }) {
   return (
@@ -129,17 +129,23 @@ function NavBar() {
                 key={item.text}
                 onClick={() => handleMenuClick()}
               >
-                <a href={item.href}>{item.text}</a>
+                <Link href={item.href}>
+                  <a>{item.text}</a>
+                </Link>
               </motion.li>
             ))}
             <div className="socialmedia mobile">
               <span>
                 <i className="fab fa-linkedin"></i>
-                <a href="#">Linkedin Profile </a>
+                <a href="https://www.linkedin.com/in/emrulla-ramilli-871441201">
+                  Linkedin Profile{" "}
+                </a>
               </span>
               <span>
                 <i className="fab fa-instagram"></i>
-                <a href="#">Instagram Profile </a>
+                <a href="https://www.instagram.com/emi___26/">
+                  Instagram Profile{" "}
+                </a>
               </span>
             </div>
           </div>

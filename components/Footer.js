@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 function Footer() {
   const controls = useAnimation();
@@ -40,14 +41,16 @@ function Footer() {
 
   return (
     <>
-      <h1 className="title" id="contact">
+      <h1 className="title" id="contact" name="contact">
         Contact me
       </h1>
       <footer>
         <div className="top-icon">
-          <a href="#nav">
-            <i className="far fa-arrow-alt-circle-up"></i>{" "}
-          </a>
+          <Link href="#nav">
+            <a>
+              <i className="far fa-arrow-alt-circle-up"></i>{" "}
+            </a>
+          </Link>
           <span>Go to top</span>
         </div>
         {data.map(({ title, text, icon, href }, index) => (

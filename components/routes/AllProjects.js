@@ -22,7 +22,7 @@ import { ToastContainer, toast } from "react-toastify";
 function AllProjects() {
   useEffect(() => {
     toast.info(
-      "Hover over the cards to see a description of each website (Desktop only)",
+      "Hover over the cards to see a description of each website(Desktop only)",
       {
         position: "top-center",
         style: { backgroundColor: "black", color: "white" },

@@ -93,7 +93,7 @@ function Portfolio() {
   };
 
   return (
-    <div className="wrapper" id="portfolio">
+    <div className="wrapper" id="portfolio" name="portfolio">
       <div className="thediv">
         <h1 className="title">My Portfolio</h1>
         <span>
