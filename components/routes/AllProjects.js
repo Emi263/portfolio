@@ -105,7 +105,7 @@ function AllProjects() {
     {
       title: "Netflix Clone",
       image: Netflix,
-      url: "https://nnetflix-clonee.netlify.app/",
+      url: "https://some-app-clone.netlify.app/",
       sourceUrl: "https://github.com/Emi263/color-palette-generator",
       description: "Pixel Perfect Clone of Netflix using Styled Components",
     },
