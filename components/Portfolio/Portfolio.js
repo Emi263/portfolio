@@ -19,7 +19,7 @@ function Portfolio() {
       title: "Netflix clone",
       image: Netflix,
       github: "https://github.com/Emi263/netflix-clone",
-      demo: "https://nnetflix-clonee.netlify.app/",
+      demo: "https://some-app-clone.netlify.app/",
       description: "React JS, TS, Styled Components, Pixel Perfect",
     },
     {
