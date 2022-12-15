@@ -84,6 +84,26 @@ function Skills() {
       icon: "fas fa-meh-rolling-eyes",
       level: "Basic",
     },
+    {
+      text: "React Native",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
+    {
+      text: "Prisma ORM",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
+    {
+      text: "Node JS",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
+    {
+      text: "Postgresql",
+      icon: "fas fa-meh-rolling-eyes",
+      level: "Intermediate",
+    },
   ];
 
   return (

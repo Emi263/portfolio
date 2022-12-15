@@ -15,13 +15,13 @@ function Cards() {
     {
       title: "React JS ecosystem",
       description:
-        "I enjoy building SPA and websites with React Js and its framework Next JS. The React ecosystem provides you with many opportunities to have an innovative website",
+        "I enjoy building SPA and websites with React Js and its framework Next JS. I also have working experience with React Native ",
       image: design2,
     },
     {
       title: "Backend and databases",
       description:
-        "Already familiar with Firebase (Auth, Storage, Firestore) and MongoDB. Aiming to learn NodeJs (Express JS) soon",
+        "Work experience developing applications with Node JS (Express JS and NestJS), Prisma ORM, Postgresql, MongoDB",
       image: design3,
     },
   ];
