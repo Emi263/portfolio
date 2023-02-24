@@ -33,7 +33,7 @@ function Portfolio() {
       title: "Blogify",
       image: Blog,
       github: "https://github.com/Emi263/blogContenful",
-      demo: "https://blog-contenful.vercel.app/",
+      demo: "https://emi-personal-blog.vercel.app/",
       description: "Next JS, Contentful, Moment.js, pagination",
     },
     {
