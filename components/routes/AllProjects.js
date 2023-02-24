@@ -73,7 +73,7 @@ function AllProjects() {
     {
       title: "Blogify",
       image: Blog,
-      url: "https://blog-contenful.vercel.app/",
+      url: "https://emi-personal-blog.vercel.app/",
       sourceUrl: "https://github.com/Emi263/blogContenful",
       description:
         "Next JS blog with Contentful as a Headless CMS. Supports rich text, image rendering betweeen the text, links, tags. Implemented custom pagination and custom filtering of posts by clicking on the hashtags",
