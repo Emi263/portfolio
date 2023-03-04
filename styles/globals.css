@@ -11,6 +11,11 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
   scroll-margin-top: 2rem;
+  
+}
+::selection {
+  background-color:  rgb(76, 64, 247);
+  color: white;
 }
 
 a {

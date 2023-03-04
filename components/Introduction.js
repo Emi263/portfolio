@@ -51,7 +51,7 @@ function Introduction() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
             >
-              Hello, my name is Emrulla. I am a Full Stack Developer specialized in FrontEnd!
+              Hello, my name is Emi. I am a Full Stack Developer specialized in FrontEnd!
   
             </motion.p>
             <motion.picture
